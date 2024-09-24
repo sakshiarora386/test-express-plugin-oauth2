@@ -1,0 +1,15 @@
+# http.get./auth/github:
+
+# this is the github login api which is handled in express eventsource plugin 
+# Hit this api to test user login-via-github functionality in your godspeed project
+# Make sure that u have provided your github client_id and secret in .env file of this project
+
+http.get./verify/user:
+  fn: helloUser
+  authn: false
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: string
