@@ -8,6 +8,6 @@ export default function (ctx: GSContext, args: PlainObject) {
         }, 
      
     }= ctx;
-
-    return new GSStatus(true, 200, undefined, 'Hello ' + user.username, undefined);  
+    const name = user.username|| user.displayName ;
+    return new GSStatus(true, 200, undefined, 'Hello ' + name, undefined);  
 }

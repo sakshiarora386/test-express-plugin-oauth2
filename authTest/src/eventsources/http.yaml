@@ -30,12 +30,32 @@ authn:
       client_id: <% process.env.GITHUB_CLIENT_ID %>  
       client_secret: <% process.env.GITHUB_CLIENT_SECRET %>    
       callback_url: <% process.env.GITHUB_CALLBACK_URL %>
+      callback_route: <% process.env.GITHUB_CALLBACK_ROUTE %>
+      auth_route: <% process.env.GITHUB_AUTH_ROUTE %>
+      success_redirect: <% process.env.GITHUB_SUCCESS_REDIRECT_URL %>
+      failure_redirect: <% process.env.GITHUB_FAILURE_REDIRECT_URL %>
+
+    google:
+      client_id: <% process.env.GOOGLE_CLIENT_ID %>  
+      client_secret: <% process.env.GOOGLE_CLIENT_SECRET %>    
+      callback_url: <% process.env.GOOGLE_CALLBACK_URL %>
+      success_redirect: <% process.env.GOOGLE_SUCCESS_REDIRECT_URL %>
+      failure_redirect: <% process.env.GOOGLE_FAILURE_REDIRECT_URL %>
+
+    linkedin:
+      client_id: <% process.env.LINKEDIN_CLIENT_ID %>  
+      client_secret: <% process.env.LINKEDIN_CLIENT_SECRET %>    
+      callback_url: <% process.env.LINKEDIN_CALLBACK_URL %>
+      success_redirect: <% process.env.LINKEDIN_SUCCESS_REDIRECT_URL %>
+      failure_redirect: <% process.env.LINKEDIN_FAILURE_REDIRECT_URL %>
 
   jwt:
     secretOrKey: <% process.env.JWT_SECRET %>  
     audience: <% process.env.JWT_AUDIENCE %>     
     issuer: <% process.env.JWT_ISSUER %>    
 
+session:
+  secret: <% process.env.SESSION_SECRET %>
 # This will require jwt to be setup, or another middleware to setup the user information in inputs
 # authz:
 #   - id: check_user_role
